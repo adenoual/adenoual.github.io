@@ -7,7 +7,6 @@
 
                                const urlRetour = urlParams.get('urlderetour');
 								const initValue = urlParams.get('initvalue');
-alert(initValue);
                               
                                function doSubmit()
 
@@ -19,18 +18,20 @@ alert(initValue);
 
                                }
 							   
-							   function doLoadT()
+							   function doLoad()
 							   {
+							   alert("1");
+							   alert(initValue);
 							   document.getElementById("t").value = initValue;
 							   }
 
                 </script>
 
-InterApp v1.2<br/> 
+InterApp v1.3<br/> 
 
                 <form id="f" name="f">
 
-                               <input type="text" id="t" name="t" onload="doLoadT()"/>
+                               <input type="text" id="t" name="t"/>
 
                                <button type="submit" onClick="return doSubmit();">Valider</button>
 
