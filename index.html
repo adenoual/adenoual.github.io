@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 <html>
+<head></head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+
+                               const urlRetour = urlParams.get('urlderetour');
+
+                              
+
+                               function doSubmit()
+
+                               {
+
+                                               window.location.href = urlRetour + "&q=" + document.getElementById("t").value;
+
+                                               return false;
+
+                               }
+
+                </script>
+
+ 
+
+                <form id="f" name="f" onload="doLoad()">
+
+                               <input type="text" id="t" name="t"/>
+
+                               <button type="submit" onClick="return doSubmit();">Valider</button>
+
+                </form>
+
 </body>
+
 </html>
