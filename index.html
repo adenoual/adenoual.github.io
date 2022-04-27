@@ -6,8 +6,9 @@
 		const urlParams = new URLSearchParams(window.location.search);
 
                                const urlRetour = urlParams.get('urlderetour');
+								const initValue = urlParams.get('initvalue');
 
-                              
+                              document.getElementById("t").value = initValue;
 
                                function doSubmit()
 
