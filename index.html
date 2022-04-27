@@ -4,39 +4,26 @@
 <body>
 	<script>
 		const urlParams = new URLSearchParams(window.location.search);
-
-                               const urlRetour = urlParams.get('urlderetour');
-								const initValue = urlParams.get('initvalue');
+		const urlRetour = urlParams.get('urlderetour');
+		const initValue = urlParams.get('initvalue');
                               
-                               function doSubmit()
-
-                               {
-
-                                               window.location.href = urlRetour + "&q=" + document.getElementById("t").value;
-
-                                               return false;
-
-                               }
+        function doSubmit()
+		{
+			window.location.href = urlRetour + "&q=" + document.getElementById("t").value;
+			return false;
+		}
 							   
-							   window.onload = function()
-							   {
-							   alert("1");
-							   alert(initValue);
-							   document.getElementById("t").value = initValue;
-							   }
+		window.onload = function()
+		{
+			document.getElementById("t").value = initValue;
+		}
+	</script>
 
-                </script>
+	InterApp<br/> 
 
-InterApp v1.5<br/> 
-
-                <form id="f" name="f">
-
-                               <input type="text" id="t" name="t"/>
-
-                               <button type="submit" onClick="return doSubmit();">Valider</button>
-
-                </form>
-
+    <form id="f" name="f">
+		<input type="text" id="t" name="t"/>
+		<button type="submit" onClick="return doSubmit();">Valider</button>
+	</form>
 </body>
-
 </html>
