@@ -3,10 +3,22 @@
 <head></head>
 <body>
 	<script>
-		const urlParams = new URLSearchParams(window.location.search);
-		const urlRetour = urlParams.get('urlderetour');
-		const initValue = urlParams.get('initvalue');
-                              
+	
+		function urlParam(name){
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if (results == null){
+				return null;
+			} else {
+				return decodeURI(results[1]) || 0;
+			}
+		}
+	
+		//const urlParams = new URLSearchParams(window.location.search);
+		//const urlRetour = urlParams.get('urlderetour');
+		//const initValue = urlParams.get('initvalue');
+        const urlRetour = urlParam('urlderetour');
+		const initValue = urlParam('initvalue');
+		
         function doSubmit()
 		{
 			window.location.href = urlRetour + "&q=" + document.getElementById("t").value;
